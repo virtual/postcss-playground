@@ -1,0 +1,7 @@
+# Browsers that we support
+# Separated Browserslist config should be named .browserslistrc and have browsers queries split by a new line. Each line is combined with the or combiner. Comments starts with # symbol:
+
+last 1 version
+> 1%
+not dead # no browsers without security updates
+cover 99.5% in US

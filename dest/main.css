@@ -1,0 +1,19 @@
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#e98a00), to(#f5aa2f));
+    background: -webkit-linear-gradient(#e98a00, #f5aa2f);
+    background: -moz-linear-gradient(#e98a00, #f5aa2f);
+    background: -o-linear-gradient(#e98a00, #f5aa2f);
+    background: linear-gradient(#e98a00, #f5aa2f); 
+}
+
+h1 {
+    blur: 12px;
+    font-size: 2em;
+    outline: auto 5px -webkit-focus-ring-color;
+}
+
+p {
+    color: #f00;
+}
+
+/* MY COMMENT */
