@@ -1,4 +1,7 @@
 {
+  "overrides": {
+    "postcss-preset-env": "7.0.0"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
     "browser-sync": "^2.29.3",
@@ -9,6 +12,7 @@
     "postcss-flexbox": "^1.0.3",
     "postcss-short": "^5.0.0",
     "postcss-short-color": "^4.0.0",
+    "postcss-simple-vars": "^7.0.1",
     "precss": "^4.0.0"
   }
 }

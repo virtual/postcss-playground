@@ -3,9 +3,13 @@ const { src, dest, watch, series } = require('gulp');
 var autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
 const browsersync = require('browser-sync').create();
+const postcssFlexbox = require('postcss-flexbox');
+const postcssVars = require('postcss-simple-vars');
 
 var plugins = [
-    autoprefixer()
+    postcssFlexbox(),
+    autoprefixer(),
+    postcssVars()
 ];
 
 const styleSource = ['styles/*.pcss'];
