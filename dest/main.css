@@ -1,9 +1,9 @@
 body {
-    background: -webkit-gradient(linear, left top, left bottom, from(#e98a00), to(#f5aa2f));
-    background: -webkit-linear-gradient(#e98a00, #f5aa2f);
-    background: -moz-linear-gradient(#e98a00, #f5aa2f);
-    background: -o-linear-gradient(#e98a00, #f5aa2f);
-    background: linear-gradient(#e98a00, #f5aa2f); 
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcfca5), to(#dff4bb));
+    background: -webkit-linear-gradient(#dcfca5, #dff4bb);
+    background: -moz-linear-gradient(#dcfca5, #dff4bb);
+    background: -o-linear-gradient(#dcfca5, #dff4bb);
+    background: linear-gradient(#dcfca5, #dff4bb); 
 }
 
 h1 {
@@ -13,7 +13,7 @@ h1 {
 }
 
 p {
-    color: #f00;
+    color: #333;
 }
 
 /* MY COMMENT */

@@ -1,50 +1,43 @@
 var postcss = require('gulp-postcss');
-var gulp = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 var autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
+const browsersync = require('browser-sync').create();
 
 var plugins = [
     autoprefixer()
 ];
 
 const styleSource = ['styles/*.pcss'];
-const watcher = gulp.watch(styleSource);
- 
+const htmlSource = ['*.html'];
+
+function browsersyncServe(cb) {
+    browsersync.init({
+        server: {
+            baseDir: '.'
+        }
+    });
+    cb();
+}
+
+function browsersyncReload(cb){
+    browsersync.reload();
+    cb();
+}
+
 function compile() {
-    return gulp.src(styleSource)
+    return src(styleSource)
         .pipe(postcss(plugins))
         .pipe(rename({
             extname: '.css'
         }))
-        .pipe(gulp.dest('./dest'));
+        .pipe(dest('./dest'));
 }
 
-function defaultTask() {
-    watcher.on('change', function(path, stats) {
-        console.log(`File ${path} was changed`);
-        compile()
-    });
+function watchTask() {
+    watch(styleSource, series(compile, browsersyncReload));
+    watch(htmlSource, browsersyncReload);
 }
 
-exports.default = defaultTask
+exports.default = series( browsersyncServe, watchTask )
 exports.compile = compile
-
-// Using Gulp v3
-// var postcss = require('gulp-postcss');
-// var gulp = require('gulp');
-// var blur = require('postcss-blur');
-
-// gulp.task('serve', ['css'], function() {
-//     gulp.watch("./styles/*.css", ['css']);
-// });
-
-// gulp.task('css', function() {
-//     var plugin = [
-//         blur()
-//     ];
-//     return gulp.src('./styles/*.css')
-//         .pipe(postcss(plugin))
-//         .pipe(gulp.dest('./dest'));
-// });
-
-// gulp.task('default', ['serve']);
