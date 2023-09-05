@@ -1,19 +1,34 @@
+
+html {
+    height: 100%;
+}
+
 body {
-    background: -webkit-gradient(linear, left top, left bottom, from(#dcfca5), to(#dff4bb));
-    background: -webkit-linear-gradient(#dcfca5, #dff4bb);
-    background: -moz-linear-gradient(#dcfca5, #dff4bb);
-    background: -o-linear-gradient(#dcfca5, #dff4bb);
-    background: linear-gradient(#dcfca5, #dff4bb); 
+    background: -webkit-gradient(linear, left top, left bottom, from(#0e0d1a), to(#15132b));
+    background: -webkit-linear-gradient(#0e0d1a, #15132b);
+    background: -moz-linear-gradient(#0e0d1a, #15132b);
+    background: -o-linear-gradient(#0e0d1a, #15132b);
+    background: linear-gradient(#0e0d1a, #15132b); 
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 h1 {
     blur: 12px;
     font-size: 2em;
-    outline: auto 5px -webkit-focus-ring-color;
+    color: #8c97ea;
 }
 
 p {
-    color: #333;
+    color: #fff;
 }
 
 /* MY COMMENT */
