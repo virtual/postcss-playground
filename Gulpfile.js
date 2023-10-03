@@ -4,11 +4,13 @@ var autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
 const browsersync = require('browser-sync').create();
 const postcssFlexbox = require('postcss-flexbox');
+const postcssMixins = require('postcss-mixins');
 const postcssVars = require('postcss-simple-vars');
 
 var plugins = [
     postcssFlexbox(),
     autoprefixer(),
+    postcssMixins(),
     postcssVars()
 ];
 
